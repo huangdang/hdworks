@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="keywords" content="blogs,博客,WordPress,黄当博客,黄当,个人博客,网页模板,博客模板" />
+		<meta name="description" content="" />
+		<meta name="baidu-site-verification" content="ImCBZxp5jz" />
+		<title>黄当个人博客-记录工作及生活琐事的个人博客</title>
+		<link rel="icon" href="img/logo.png" />
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/time.min.css" />
+		<script src="layui/layui.js"></script>
+		<script src="js/util/nav.js"></script>
+		<!--加载meta IE兼容文件-->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="menu-btn">
+				<div class="menu"></div>
+			</div>
+			<div class="header_nav_logo">
+				<h1 class="logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="logo" title="logo" />
+					</a>
+				</h1>
+				<div class="nav">
+					<a href="index.html" class="active">
+						<i class="layui-icon layui-icon-read"></i>
+						<span>发现</span>
+					</a>
+					<a href="whisper.html">
+						<i class="layui-icon layui-icon-carousel"></i>
+						<span>相册</span>
+					</a>
+					<a href="leacots.html">
+						<i class="layui-icon layui-icon-dialogue"></i>
+						<span>消息</span>
+					</a>
+					<a href="about.html">
+						<i class="layui-icon layui-icon-about"></i>
+						<span>关于</span>
+					</a>
+				</div>
+			</div>
+			<ul class="layui-nav header-down-nav">
+				<li class="layui-nav-item">
+					<a href="index.html" class="active">发现</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="whisper.html">相册</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="leacots.html">消息</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="about.html">关于</a>
+				</li>
+			</ul>
+			<p class="welcome-text">
+				欢迎光临寒站，我是<span class="name">小明卖粥</span>
+			</p>
+		</div>
+
+		<div class="content">
+			<div class="cont w1000">
+				<div class="title">
+					<span class="layui-breadcrumb" lay-separator="|">
+          				<a href="javascript:;" class="active">前端文章</a>
+          				<a href="javascript:;">生活琐事</a>
+          				<a href="javascript:;">旅游杂记</a>
+        			</span>
+				</div>
+				<div class="list-item">
+					<div class="item">
+						<div class="layui-fluid">
+							<div class="layui-row">
+								<div class="layui-col-xs12 layui-col-sm8 layui-col-md9">
+									<div class="item-cont">
+										<h3><a href="details.html">记录第一篇博客</a><button class="layui-btn layui-btn-danger new-icon">new</button></h3>
+										<p>昨天看一部电视剧3点才睡觉，想着今天和明天休假，所以睡得晚些，早上8点就被楼上装修电钻的声音吵醒了。<br />
+										第一次自己建站，随便写点东西充实下网站（反正没人看），半年前注册了一个域名<a href="http://www.huangdang1993.com">huangdang1993.com</a>，这才正式有了自己的博客。因此特别纪念自己的博客正式开张。</p>
+										<div class="meta">
+											<span>设计文章</span>
+											<a>黄当</a>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-xs12 layui-col-sm4 layui-col-md3 ohide">
+									<div class="img"><img src="img/wy_img1.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="demo" style="text-align: center;"></div>
+			</div>
+		</div>
+
+		<div class="footer-wrap">
+			<div class="footer">
+				<span>Copyright © 2019</span>
+				<a href="">黄当个人博客</a>
+				<span>备案号：<strong>琼ICP备19003854</strong></span>
+			</div>
+		</div>
+		<span id="set-top" style="display: none;">返回顶部</span>
+		
+		<!-- 入口 -->
+		<div class="entrance">
+			<div class="banner" id="banner">
+				<div class="ban_item"></div>
+				<div class="ban_item"></div>
+				<div class="ban_item"></div>
+			</div>
+			<div class="box">
+				<div id="closeIn" class="colsein">进入寝殿</div>
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td>当前时间</td>
+					</tr>
+					<tr>
+						<td id="timemy"></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td id="outT">距离2020年还有</td>
+					</tr>
+					<tr>
+						<td id="LeftTime"></td>
+					</tr>
+				</table>
+				<div id="wmtime"></div>
+			</div>
+		</div>
+		<script src="js/util/time.min.js"></script>
+	</body>
+</html>
+

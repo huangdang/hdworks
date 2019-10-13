@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>发现-黄当个人博客</title>
+		<link rel="icon" href="img/logo.png" />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!--加载meta IE兼容文件-->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="menu-btn">
+				<div class="menu"></div>
+			</div>
+			<div class="header_nav_logo">
+				<h1 class="logo">
+					<a href="index.html">
+						<img src="img/logo.png" />
+					</a>
+				</h1>
+				<div class="nav">
+					<a href="index.html" class="active">
+						<i class="layui-icon layui-icon-read"></i>
+						<span>发现</span>
+					</a>
+					<a href="whisper.html">
+						<i class="layui-icon layui-icon-carousel"></i>
+						<span>相册</span>
+					</a>
+					<a href="leacots.html">
+						<i class="layui-icon layui-icon-dialogue"></i>
+						<span>消息</span>
+					</a>
+					<a href="about.html">
+						<i class="layui-icon layui-icon-about"></i>
+						<span>关于</span>
+					</a>
+				</div>
+			</div>
+			<ul class="layui-nav header-down-nav">
+				<li class="layui-nav-item">
+					<a href="index.html" class="active">发现</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="whisper.html">相册</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="leacots.html">消息</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="about.html">关于</a>
+				</li>
+			</ul>
+			<p class="welcome-text">
+				欢迎光临寒站，我是<span class="name">小明卖粥</span>
+			</p>
+		</div>
+
+		<div class="content whisper-content leacots-content details-content">
+			<div class="cont w1000">
+				<div class="whisper-list">
+					<div class="item-box">
+						<div class="review-version">
+							<div class="form-box">
+								<div class="article-cont">
+									<div class="title">
+										<h3>记录第一篇博客</h3>
+										<p class="cont-info"><span class="data">2019/09/26</span><span class="types">黄当</span></p>
+									</div>
+									<p>昨天看一部电视剧3点才睡觉，想着今天和明天休假，所以睡得晚些，早上8点就被楼上装修电钻的声音吵醒了。</p>
+									<p>第一次自己建站，随便写点东西充实下网站（反正没人看），半年前注册了一个域名<a href="http://www.huangdang1993.com">huangdang1993.com</a>，这才正式有了自己的博客。因此特别纪念自己的博客正式开张。</p>
+									<img src="img/0wy_img1.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/html" id="laytplCont">
+			<div class="cont">
+				<div class="img">
+					{{# if(d.avatar){ }}
+					<img src="{{d.avatar}}" alt=""> {{# } else { }}
+					<img src="img/header.png" alt=""> {{# } }}
+				</div>
+				<div class="text">
+					<p class="tit"><span class="name">{{d.name}}</span><span class="data">2018/06/06</span></p>
+					<p class="ct">{{d.cont}}</p>
+				</div>
+			</div>
+		</script>
+		<div class="footer-wrap">
+			<div class="footer">
+				<span>Copyright © 2019</span>
+				<a href="">黄当个人博客</a>
+				<span>备案号：<strong>琼ICP备19003854</strong></span>
+			</div>
+		</div>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.config({
+				base: 'js/util/'
+			}).use(['element', 'laypage', 'form', 'menu'], function() {
+				element = layui.element, laypage = layui.laypage, form = layui.form, menu = layui.menu;
+				laypage.render({
+					elem: 'demo',
+					count: 70 //数据总数，从服务端得到
+				});
+				menu.init();
+				menu.submit();
+			})
+		</script>
+	</body>
+
+</html>
