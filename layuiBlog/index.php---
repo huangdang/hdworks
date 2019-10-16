@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  		<meta charset="UTF-8">
+  		<title>Document</title>
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<link rel="stylesheet" type="text/css" href="../res/css/index.css">
+  		<script src="./res/layui/layui.js"></script>
+		<!--加载meta IE兼容文件-->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--<canvas id="cavsElem">
+		你的浏览器版本太低！可能会影响您浏览网页，请升级<em>浏览器</em>或者<em>换别的浏览器！</em>
+		</canvas>-->
+		<a href="html/index.html" id="oa" class="layui-index-a">
+			<span id="oaspan">欢迎光临寒舍，请按响门铃</span>
+		</a>
+		<div class="banner"></div>
+		<div id="box" class="layui-container">点我切换</div>
+		
+		<div class="img-con">
+			<div class="box-img">
+				<img src="res/img/xc_img1.jpg" />
+				<img src="res/img/xc_img1.jpg" />
+			</div>
+			<div id="show-img">
+				<img />
+				<img />
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	layui.use(['jquery', 'laytpl', 'layer'],function(){
+		var $ = layui.$,
+			laytpl = layui.laytpl,
+			layer = layui.layer;
+		/**
+		 * 
+		 */
+		let a = $("#box");
+		$(a).on('click',function(){
+			$("#oaspan").text($(this).text());
+			$(a).on('click',function(){
+				$("#oaspan").text("欢迎光临寒舍，请按响门铃");
+			})
+		})
+		
+		/**
+		 * 
+		 */
+		let length_img = $(".box-img img");
+		let show_img = $("#show-img img");
+		$(length_img).hover(function(){
+			let src_img = $(this).attr("src");
+			var i = $(this).index();
+			$(show_img).attr("src",src_img);
+			$("#show-img img").eq(i).addClass("add").siblings().removeClass("add");
+		},function(){
+			$(show_img).attr({
+				"src":"",
+				"class":""
+			});
+		})
+		
+		/**
+		 * 
+		 */
+		let box = document.getElementById('box');
+		    document.onmousedown = function (e) {
+		      let disx = e.pageX - box.offsetLeft;
+		      let disy = e.pageY - box.offsetTop;
+		      document.onmousemove = function (e) {
+		        box.style.left = e.pageX - disx + 'px';
+		        box.style.top = e.pageY - disy + 'px';
+		      }
+		      
+		      document.onmouseup = function () {
+		        document.onmousemove = document.onmouseup = null;
+		      }
+		}
+	})
+</script>

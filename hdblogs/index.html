@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="keywords" content="blogs,博客,WordPress,黄当博客,黄当,个人博客,网页模板,博客模板" />
+		<meta name="description" content="" />
+		<title>首页</title>
+		<style>
+			* {
+				text-align: center;
+				margin: 10px auto 0;
+			}
+			table {
+				table-layout: fixed;
+				border-collapse: collapse;
+			}
+			td {
+				border: 1px solid rgba(0,0,0,0.3);
+				width: 100px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				padding: 10px 15px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td id="timemy">当前时间：</td>
+				<td>2</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	function showTime(){
+		var odate = new Date();
+		var _date = odate.getDate(), //几号
+			_hours = odate.getHours(), //小时
+			_month = odate.getMonth() +1, //月
+			_min = odate.getMinutes(), //分
+			_mind = odate.getSeconds(); //秒
+		document.getElementById("timemy").innerText = "当前时间： " + _month + "月" + _date + "号"  + _hours + "点" + _min + "分" + _mind + " 秒";
+		document.getElementById("timemy").style.fontSize = "16px";
+		document.getElementById("timemy").style.transition = "1s";
+	}
+
+	setInterval("showTime()",1000);
+</script>
